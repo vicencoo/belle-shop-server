@@ -8,6 +8,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 
 //Routes here
+const categoryRoutes = require("./routes/categoryRoutes");
 
 app.use(express.json());
 app.use(cookieParser());
@@ -33,6 +34,7 @@ app.use(
 
 //use routes
 //app.use=(routeHere)
+app.use(categoryRoutes);
 
 const port = process.env.PORT;
 
